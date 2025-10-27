@@ -1,0 +1,74 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "createAndInitializePoolIfNecessary",
+      "inputs": [
+        { "name": "token0", "type": "address", "internalType": "address" },
+        { "name": "token1", "type": "address", "internalType": "address" },
+        { "name": "fee", "type": "uint24", "internalType": "uint24" },
+        { "name": "sqrtPriceX96", "type": "uint160", "internalType": "uint160" }
+      ],
+      "outputs": [
+        { "name": "pool", "type": "address", "internalType": "address" }
+      ],
+      "stateMutability": "payable"
+    }
+  ],
+  "bytecode": { "object": "0x", "sourceMap": "", "linkReferences": {} },
+  "deployedBytecode": { "object": "0x", "sourceMap": "", "linkReferences": {} },
+  "methodIdentifiers": {
+    "createAndInitializePoolIfNecessary(address,address,uint24,uint160)": "13ead562"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"uint160\",\"name\":\"sqrtPriceX96\",\"type\":\"uint160\"}],\"name\":\"createAndInitializePoolIfNecessary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interfaces/Uniswap/IUniswapPair.sol\":\"IPoolInitializer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"interfaces/Uniswap/IUniswapPair.sol\":{\"keccak256\":\"0xa4d4df3328b7782296b3aafcc23ff8c4016138f3784bdcbea05d9106b9cb8db6\",\"urls\":[\"bzz-raw://c3d25f8a211c51bcf3a658eafa84901c115ddd471e3730c2173e2a6b35ea0ba2\",\"dweb:/ipfs/QmSHyT6J4V2g9iEQ812W8KkjxDFjBhW4nxsxbZHJGJzo95\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": { "version": "0.8.19+commit.7dd6d404" },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "token0", "type": "address" },
+            { "internalType": "address", "name": "token1", "type": "address" },
+            { "internalType": "uint24", "name": "fee", "type": "uint24" },
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceX96",
+              "type": "uint160"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "createAndInitializePoolIfNecessary",
+          "outputs": [
+            { "internalType": "address", "name": "pool", "type": "address" }
+          ]
+        }
+      ],
+      "devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+      "userdoc": { "kind": "user", "methods": {}, "version": 1 }
+    },
+    "settings": {
+      "remappings": ["forge-std/=lib/forge-std/src/"],
+      "optimizer": { "enabled": true, "runs": 200 },
+      "metadata": { "bytecodeHash": "ipfs" },
+      "compilationTarget": {
+        "interfaces/Uniswap/IUniswapPair.sol": "IPoolInitializer"
+      },
+      "evmVersion": "paris",
+      "libraries": {}
+    },
+    "sources": {
+      "interfaces/Uniswap/IUniswapPair.sol": {
+        "keccak256": "0xa4d4df3328b7782296b3aafcc23ff8c4016138f3784bdcbea05d9106b9cb8db6",
+        "urls": [
+          "bzz-raw://c3d25f8a211c51bcf3a658eafa84901c115ddd471e3730c2173e2a6b35ea0ba2",
+          "dweb:/ipfs/QmSHyT6J4V2g9iEQ812W8KkjxDFjBhW4nxsxbZHJGJzo95"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "id": 5
+}

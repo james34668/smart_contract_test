@@ -1,0 +1,448 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "collect",
+      "inputs": [
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct INonfungiblePositionManager.CollectParams",
+          "components": [
+            { "name": "tokenId", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "recipient",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "amount0Max",
+              "type": "uint128",
+              "internalType": "uint128"
+            },
+            {
+              "name": "amount1Max",
+              "type": "uint128",
+              "internalType": "uint128"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "payable"
+    },
+    {
+      "type": "function",
+      "name": "createAndInitializePoolIfNecessary",
+      "inputs": [
+        { "name": "token0", "type": "address", "internalType": "address" },
+        { "name": "token1", "type": "address", "internalType": "address" },
+        { "name": "fee", "type": "uint24", "internalType": "uint24" },
+        { "name": "sqrtPriceX96", "type": "uint160", "internalType": "uint160" }
+      ],
+      "outputs": [
+        { "name": "pool", "type": "address", "internalType": "address" }
+      ],
+      "stateMutability": "payable"
+    },
+    {
+      "type": "function",
+      "name": "decreaseLiquidity",
+      "inputs": [
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct INonfungiblePositionManager.DecreaseLiquidityParams",
+          "components": [
+            { "name": "tokenId", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "liquidity",
+              "type": "uint128",
+              "internalType": "uint128"
+            },
+            {
+              "name": "amount0Min",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount1Min",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            { "name": "deadline", "type": "uint256", "internalType": "uint256" }
+          ]
+        }
+      ],
+      "outputs": [
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "payable"
+    },
+    {
+      "type": "function",
+      "name": "increaseLiquidity",
+      "inputs": [
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct INonfungiblePositionManager.IncreaseLiquidityParams",
+          "components": [
+            { "name": "tokenId", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "amount0Desired",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount1Desired",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount0Min",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount1Min",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            { "name": "deadline", "type": "uint256", "internalType": "uint256" }
+          ]
+        }
+      ],
+      "outputs": [
+        { "name": "liquidity", "type": "uint128", "internalType": "uint128" },
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "payable"
+    },
+    {
+      "type": "function",
+      "name": "mint",
+      "inputs": [
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct INonfungiblePositionManager.MintParams",
+          "components": [
+            { "name": "token0", "type": "address", "internalType": "address" },
+            { "name": "token1", "type": "address", "internalType": "address" },
+            { "name": "fee", "type": "uint24", "internalType": "uint24" },
+            { "name": "tickLower", "type": "int24", "internalType": "int24" },
+            { "name": "tickUpper", "type": "int24", "internalType": "int24" },
+            {
+              "name": "amount0Desired",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount1Desired",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount0Min",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "amount1Min",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "recipient",
+              "type": "address",
+              "internalType": "address"
+            },
+            { "name": "deadline", "type": "uint256", "internalType": "uint256" }
+          ]
+        }
+      ],
+      "outputs": [
+        { "name": "tokenId", "type": "uint256", "internalType": "uint256" },
+        { "name": "liquidity", "type": "uint128", "internalType": "uint128" },
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "payable"
+    }
+  ],
+  "bytecode": { "object": "0x", "sourceMap": "", "linkReferences": {} },
+  "deployedBytecode": { "object": "0x", "sourceMap": "", "linkReferences": {} },
+  "methodIdentifiers": {
+    "collect((uint256,address,uint128,uint128))": "fc6f7865",
+    "createAndInitializePoolIfNecessary(address,address,uint24,uint160)": "13ead562",
+    "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))": "0c49ccbe",
+    "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))": "219f5d17",
+    "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))": "88316456"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"amount0Max\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amount1Max\",\"type\":\"uint128\"}],\"internalType\":\"struct INonfungiblePositionManager.CollectParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"collect\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"uint160\",\"name\":\"sqrtPriceX96\",\"type\":\"uint160\"}],\"name\":\"createAndInitializePoolIfNecessary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.DecreaseLiquidityParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"decreaseLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.IncreaseLiquidityParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"increaseLiquidity\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"int24\",\"name\":\"tickLower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"tickUpper\",\"type\":\"int24\"},{\"internalType\":\"uint256\",\"name\":\"amount0Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.MintParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interfaces/Uniswap/IUniswapPair.sol\":\"INonfungiblePositionManager\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"interfaces/Uniswap/IUniswapPair.sol\":{\"keccak256\":\"0xa4d4df3328b7782296b3aafcc23ff8c4016138f3784bdcbea05d9106b9cb8db6\",\"urls\":[\"bzz-raw://c3d25f8a211c51bcf3a658eafa84901c115ddd471e3730c2173e2a6b35ea0ba2\",\"dweb:/ipfs/QmSHyT6J4V2g9iEQ812W8KkjxDFjBhW4nxsxbZHJGJzo95\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": { "version": "0.8.19+commit.7dd6d404" },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.CollectParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "recipient",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "amount0Max",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "amount1Max",
+                  "type": "uint128"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "collect",
+          "outputs": [
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "token0", "type": "address" },
+            { "internalType": "address", "name": "token1", "type": "address" },
+            { "internalType": "uint24", "name": "fee", "type": "uint24" },
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceX96",
+              "type": "uint160"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "createAndInitializePoolIfNecessary",
+          "outputs": [
+            { "internalType": "address", "name": "pool", "type": "address" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.DecreaseLiquidityParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "liquidity",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deadline",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "decreaseLiquidity",
+          "outputs": [
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.IncreaseLiquidityParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deadline",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "increaseLiquidity",
+          "outputs": [
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct INonfungiblePositionManager.MintParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token0",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1",
+                  "type": "address"
+                },
+                { "internalType": "uint24", "name": "fee", "type": "uint24" },
+                {
+                  "internalType": "int24",
+                  "name": "tickLower",
+                  "type": "int24"
+                },
+                {
+                  "internalType": "int24",
+                  "name": "tickUpper",
+                  "type": "int24"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Desired",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1Min",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "recipient",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deadline",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "mint",
+          "outputs": [
+            { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" }
+          ]
+        }
+      ],
+      "devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+      "userdoc": { "kind": "user", "methods": {}, "version": 1 }
+    },
+    "settings": {
+      "remappings": ["forge-std/=lib/forge-std/src/"],
+      "optimizer": { "enabled": true, "runs": 200 },
+      "metadata": { "bytecodeHash": "ipfs" },
+      "compilationTarget": {
+        "interfaces/Uniswap/IUniswapPair.sol": "INonfungiblePositionManager"
+      },
+      "evmVersion": "paris",
+      "libraries": {}
+    },
+    "sources": {
+      "interfaces/Uniswap/IUniswapPair.sol": {
+        "keccak256": "0xa4d4df3328b7782296b3aafcc23ff8c4016138f3784bdcbea05d9106b9cb8db6",
+        "urls": [
+          "bzz-raw://c3d25f8a211c51bcf3a658eafa84901c115ddd471e3730c2173e2a6b35ea0ba2",
+          "dweb:/ipfs/QmSHyT6J4V2g9iEQ812W8KkjxDFjBhW4nxsxbZHJGJzo95"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "id": 5
+}

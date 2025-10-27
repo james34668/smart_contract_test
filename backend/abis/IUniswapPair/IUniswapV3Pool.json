@@ -1,0 +1,428 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "approve",
+      "inputs": [
+        { "name": "spender", "type": "address", "internalType": "address" },
+        { "name": "value", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "balanceOf",
+      "inputs": [
+        { "name": "account", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "burn",
+      "inputs": [
+        { "name": "tickLower", "type": "int24", "internalType": "int24" },
+        { "name": "tickUpper", "type": "int24", "internalType": "int24" },
+        { "name": "amount", "type": "uint128", "internalType": "uint128" }
+      ],
+      "outputs": [
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "collectProtocol",
+      "inputs": [
+        { "name": "recipient", "type": "address", "internalType": "address" },
+        {
+          "name": "amount0Requested",
+          "type": "uint128",
+          "internalType": "uint128"
+        },
+        {
+          "name": "amount1Requested",
+          "type": "uint128",
+          "internalType": "uint128"
+        }
+      ],
+      "outputs": [
+        { "name": "amount0", "type": "uint128", "internalType": "uint128" },
+        { "name": "amount1", "type": "uint128", "internalType": "uint128" }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "flash",
+      "inputs": [
+        { "name": "recipient", "type": "address", "internalType": "address" },
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" },
+        { "name": "data", "type": "bytes", "internalType": "bytes" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getReserves",
+      "inputs": [],
+      "outputs": [
+        { "name": "reserve0", "type": "uint112", "internalType": "uint112" },
+        { "name": "reserve1", "type": "uint112", "internalType": "uint112" },
+        {
+          "name": "blockTimestampLast",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "mint",
+      "inputs": [
+        { "name": "recipient", "type": "address", "internalType": "address" },
+        { "name": "tickLower", "type": "int24", "internalType": "int24" },
+        { "name": "tickUpper", "type": "int24", "internalType": "int24" },
+        { "name": "amount", "type": "uint128", "internalType": "uint128" },
+        { "name": "data", "type": "bytes", "internalType": "bytes" }
+      ],
+      "outputs": [
+        { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "skim",
+      "inputs": [
+        { "name": "to", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "swap",
+      "inputs": [
+        { "name": "recipient", "type": "address", "internalType": "address" },
+        { "name": "zeroForOne", "type": "bool", "internalType": "bool" },
+        {
+          "name": "amountSpecified",
+          "type": "int256",
+          "internalType": "int256"
+        },
+        {
+          "name": "sqrtPriceLimitX96",
+          "type": "uint160",
+          "internalType": "uint160"
+        },
+        { "name": "data", "type": "bytes", "internalType": "bytes" }
+      ],
+      "outputs": [
+        { "name": "amount0", "type": "int256", "internalType": "int256" },
+        { "name": "amount1", "type": "int256", "internalType": "int256" }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "sync",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "token0",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "token1",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "transfer",
+      "inputs": [
+        { "name": "to", "type": "address", "internalType": "address" },
+        { "name": "value", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "transferFrom",
+      "inputs": [
+        { "name": "from", "type": "address", "internalType": "address" },
+        { "name": "to", "type": "address", "internalType": "address" },
+        { "name": "value", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "nonpayable"
+    }
+  ],
+  "bytecode": { "object": "0x", "sourceMap": "", "linkReferences": {} },
+  "deployedBytecode": { "object": "0x", "sourceMap": "", "linkReferences": {} },
+  "methodIdentifiers": {
+    "approve(address,uint256)": "095ea7b3",
+    "balanceOf(address)": "70a08231",
+    "burn(int24,int24,uint128)": "a34123a7",
+    "collectProtocol(address,uint128,uint128)": "85b66729",
+    "flash(address,uint256,uint256,bytes)": "490e6cbc",
+    "getReserves()": "0902f1ac",
+    "mint(address,int24,int24,uint128,bytes)": "3c8a7d8d",
+    "skim(address)": "bc25cf77",
+    "swap(address,bool,int256,uint160,bytes)": "128acb08",
+    "sync()": "fff6cae9",
+    "token0()": "0dfe1681",
+    "token1()": "d21220a7",
+    "transfer(address,uint256)": "a9059cbb",
+    "transferFrom(address,address,uint256)": "23b872dd"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"int24\",\"name\":\"tickLower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"tickUpper\",\"type\":\"int24\"},{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"amount0Requested\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amount1Requested\",\"type\":\"uint128\"}],\"name\":\"collectProtocol\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"amount0\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amount1\",\"type\":\"uint128\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"flash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReserves\",\"outputs\":[{\"internalType\":\"uint112\",\"name\":\"reserve0\",\"type\":\"uint112\"},{\"internalType\":\"uint112\",\"name\":\"reserve1\",\"type\":\"uint112\"},{\"internalType\":\"uint32\",\"name\":\"blockTimestampLast\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"int24\",\"name\":\"tickLower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"tickUpper\",\"type\":\"int24\"},{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"skim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"zeroForOne\",\"type\":\"bool\"},{\"internalType\":\"int256\",\"name\":\"amountSpecified\",\"type\":\"int256\"},{\"internalType\":\"uint160\",\"name\":\"sqrtPriceLimitX96\",\"type\":\"uint160\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"swap\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"amount0\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"amount1\",\"type\":\"int256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"sync\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interfaces/Uniswap/IUniswapPair.sol\":\"IUniswapV3Pool\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"interfaces/Uniswap/IUniswapPair.sol\":{\"keccak256\":\"0xa4d4df3328b7782296b3aafcc23ff8c4016138f3784bdcbea05d9106b9cb8db6\",\"urls\":[\"bzz-raw://c3d25f8a211c51bcf3a658eafa84901c115ddd471e3730c2173e2a6b35ea0ba2\",\"dweb:/ipfs/QmSHyT6J4V2g9iEQ812W8KkjxDFjBhW4nxsxbZHJGJzo95\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": { "version": "0.8.19+commit.7dd6d404" },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "spender", "type": "address" },
+            { "internalType": "uint256", "name": "value", "type": "uint256" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "approve",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }]
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "account", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balanceOf",
+          "outputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            { "internalType": "int24", "name": "tickLower", "type": "int24" },
+            { "internalType": "int24", "name": "tickUpper", "type": "int24" },
+            { "internalType": "uint128", "name": "amount", "type": "uint128" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burn",
+          "outputs": [
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint128",
+              "name": "amount0Requested",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "amount1Requested",
+              "type": "uint128"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "collectProtocol",
+          "outputs": [
+            { "internalType": "uint128", "name": "amount0", "type": "uint128" },
+            { "internalType": "uint128", "name": "amount1", "type": "uint128" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" },
+            { "internalType": "bytes", "name": "data", "type": "bytes" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "flash"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReserves",
+          "outputs": [
+            {
+              "internalType": "uint112",
+              "name": "reserve0",
+              "type": "uint112"
+            },
+            {
+              "internalType": "uint112",
+              "name": "reserve1",
+              "type": "uint112"
+            },
+            {
+              "internalType": "uint32",
+              "name": "blockTimestampLast",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            { "internalType": "int24", "name": "tickLower", "type": "int24" },
+            { "internalType": "int24", "name": "tickUpper", "type": "int24" },
+            { "internalType": "uint128", "name": "amount", "type": "uint128" },
+            { "internalType": "bytes", "name": "data", "type": "bytes" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint",
+          "outputs": [
+            { "internalType": "uint256", "name": "amount0", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount1", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "to", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "skim"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            { "internalType": "bool", "name": "zeroForOne", "type": "bool" },
+            {
+              "internalType": "int256",
+              "name": "amountSpecified",
+              "type": "int256"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceLimitX96",
+              "type": "uint160"
+            },
+            { "internalType": "bytes", "name": "data", "type": "bytes" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "swap",
+          "outputs": [
+            { "internalType": "int256", "name": "amount0", "type": "int256" },
+            { "internalType": "int256", "name": "amount1", "type": "int256" }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "sync"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token0",
+          "outputs": [
+            { "internalType": "address", "name": "", "type": "address" }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token1",
+          "outputs": [
+            { "internalType": "address", "name": "", "type": "address" }
+          ]
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "to", "type": "address" },
+            { "internalType": "uint256", "name": "value", "type": "uint256" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transfer",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }]
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "from", "type": "address" },
+            { "internalType": "address", "name": "to", "type": "address" },
+            { "internalType": "uint256", "name": "value", "type": "uint256" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferFrom",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }]
+        }
+      ],
+      "devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+      "userdoc": { "kind": "user", "methods": {}, "version": 1 }
+    },
+    "settings": {
+      "remappings": ["forge-std/=lib/forge-std/src/"],
+      "optimizer": { "enabled": true, "runs": 200 },
+      "metadata": { "bytecodeHash": "ipfs" },
+      "compilationTarget": {
+        "interfaces/Uniswap/IUniswapPair.sol": "IUniswapV3Pool"
+      },
+      "evmVersion": "paris",
+      "libraries": {}
+    },
+    "sources": {
+      "interfaces/Uniswap/IUniswapPair.sol": {
+        "keccak256": "0xa4d4df3328b7782296b3aafcc23ff8c4016138f3784bdcbea05d9106b9cb8db6",
+        "urls": [
+          "bzz-raw://c3d25f8a211c51bcf3a658eafa84901c115ddd471e3730c2173e2a6b35ea0ba2",
+          "dweb:/ipfs/QmSHyT6J4V2g9iEQ812W8KkjxDFjBhW4nxsxbZHJGJzo95"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "id": 5
+}
